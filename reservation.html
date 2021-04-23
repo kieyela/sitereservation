@@ -80,6 +80,12 @@
                   </a>
                 </div>
               </li>
+              <li>
+                <a class="nav-link" href="login.html"
+                  ><i class="fa fa-user"></i>
+                  Espace Agent
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -91,138 +97,117 @@
             <div class="page-nav">
               <p>
                 <a href="#">Acceuil</a> &nbsp; | &nbsp;
-                <a href="#">Nous contacter</a>
+                <a href="#">Destination</a> &nbsp; | &nbsp;
+                <a href="#">Réservation</a>
               </p>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="col-6" >
-        <h2>RESERVATION CLIENT</h2>
-        <hr>
-    
-            <fieldset class="form-group row">
-                <legend class="col-form-legend col-sm-1-12">Enregistrement client</legend>
-                <div class="col-sm-1-12">
-                    <div class="col-lg-5 p-3">
-                        <form class="p-4 bg-dark-opaque" method="post" action="https://formspree.io/" >
-                            <br>
-                          
-                          <div class="form-group"> <label>Identifiant client</label>
-                            <input class="form-control" placeholder="saisir ici"> </div>
-                            <br>
-                            <br>
-                            <br>
-                            <div class="form-group"> <label>Nom du client</label>
-                                <input class="form-control" placeholder="saisir ici"> </div>
-                                <br>
-                            <br>
-                            <br>
-                                <div class="form-group"> <label>numéro de télephone</label>
-                                    <input class="form-control" placeholder="saisir ici"> </div>
-                                    <br>
-                            <br>
-                            <br>
-                                    <div class="form-group"> <label>Adresse Email</label>
-                                        <input class="form-control" placeholder="saisir ici"> </div>
-                                        <br>
-                            <br>
-                            <br>
-                                        <div class="form-group"> <label>Numéro de passeport</label>
-                                            <input class="form-control" placeholder="saisir ici"> </div>
-                   
-                          
-                         </div>
-                         
-                        </form>
-                      </div>
+
+    <section class="slide container mt-3 pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title text-center">
+              <span>Réservation</span>
+              <h2 style="color: #000">Réserver votre billet</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form
+              class="p-4 bg-dark-opaque"
+              method="post"
+              action="confirmation.html"
+            >
+              <fieldset class="form-group row">
+                <legend class="col-form-legend col-sm-1-12">
+                  Informations client
+                </legend>
+                <div class="col-lg-8 p-3">
+                  <div class="form-group">
+                    <label>Identifiant client</label>
+                    <input class="form-control" placeholder="saisir ici" />
+                  </div>
+                  <div class="form-group">
+                    <label>Nom du client</label>
+                    <input class="form-control" placeholder="saisir ici" />
+                  </div>
+                  <div class="form-group">
+                    <label>numéro de télephone</label>
+                    <input class="form-control" placeholder="saisir ici" />
+                  </div>
+                  <br />
+                  <div class="form-group">
+                    <label>Adresse Email</label>
+                    <input class="form-control" placeholder="saisir ici" />
+                  </div>
+                  <br />
+                  <div class="form-group">
+                    <label>Numéro de passeport</label>
+                    <input class="form-control" placeholder="saisir ici" />
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form-group row">
+                <legend class="col-form-legend col-sm-1-12">
+                  Détail de la resevation
+                </legend>
+                <div class="col-lg-8 p-3">
+                  <div class="form-group">
+                    <label>Identifiant de la destination</label>
+                    <input class="form-control" placeholder="saisir ici" />
+                  </div>
+                  <div class="form-group">
+                    <label>Nom de la ville </label>
+                    <select class="custom-select" name="" id="">
+                      <option selected>Selectionner la destination</option>
+                      <option value="">paris</option>
+                      <option value="">abidjan</option>
+                      <option value="">rabat</option>
+                      <option value="">casablanca</option>
+                      <option value="">bamako</option>
+                      <option value="">millan</option>
+                      <option value="">quebec</option>
+                      <option value="">lile</option>
+                    </select>
+
+                    <div class="form-group">
+                      <label>nom du pays</label>
+                      <select class="custom-select" name="" id="">
+                        <option selected>Selectionner la destination</option>
+                        <option value="">cote d'ivoire</option>
+                        <option value="">france</option>
+                        <option value="">maroc</option>
+                        <option value="">Mali</option>
+                        <option value="">Allemagne</option>
+                        <option value="">belgique</option>
+                        <option value="">suisse</option>
+                        <option value="">canada</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>date de départ</label>
+                      <input class="form-control" placeholder="saisir ici" />
+                      <label>date de retour</label>
+                      <input class="form-control" placeholder="saisir ici" />
                     </div>
                   </div>
                 </div>
-                </div>
-            </fieldset>
-            <div class="form-group row">
+              </fieldset>
+              <div class="form-group row">
                 <div class="offset-sm-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">Valider</button>
+                  <button type="submit" class="btn btn-primary">Valider</button>
                 </div>
-            </div>
-        </form>
-        
-    </div>
-<br>
-<br>
-<br>
-<br>
-    <div class="container">
-        <form>
-            </div>
-            <fieldset class="form-group row">
-                <legend class="col-form-legend col-sm-1-12">Détail de la resevation</legend>
-                <div class="col-sm-1-12">
-                    <div class="col-lg-5 p-3">
-                        <form class="p-4 bg-dark-opaque" method="post" action="https://formspree.io/" >
-                            <br>
-                          
-                          <div class="form-group"> <label>Identifiant de la destination</label>
-                            <input class="form-control" placeholder="saisir ici"> </div>
-                            <br>
-                            <br>
-                            <br>
-                            <div class="form-group"> <label>Nom de la ville </label>                   <select multiple class="custom-select" name="" id="">
-                                <option selected>Selectionner la destination</option>
-                                <option value="">paris</option>
-                                <option value="">abidjan</option>
-                                <option value="">rabat</option>
-                                <option value="">casablanca</option>
-                                <option value="">bamako</option>
-                                <option value="">millan</option>
-                                <option value="">quebec</option>
-                                <option value="">lile</option>
-                            </select>
-                               
-                                <br>
-                            <br>
-                            <br>
-                                <div class="form-group"> <label>nom du pays</label>        <select multiple class="custom-select" name="" id="">
-                                    <option selected>Selectionner la destination</option>
-                                    <option value="">cote d'ivoire</option>
-                                    <option value="">france</option>
-                                    <option value="">maroc</option>
-                                    <option value="">Mali/option>
-                                    <option value="">Allemagne</option>
-                                    <option value="">belgique</option>
-                                    <option value="">suisse</option>
-                                    <option value="">canada</option>
-                                </select>
-                                
-                                  
-                                    <br>
-                            <br>
-                            <br>
-                         </div>
-                         <br>
-                            <br>
-                            <br>
-                            <div class="form-group"> <label>date de départ</label>
-                                <input class="form-control" placeholder="saisir ici"> <label>date de retour</label>
-                                <input class="form-control" placeholder="saisir ici">
-                            </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </fieldset>
-            <div class="form-group row">
-                <div class="offset-sm-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">Valider</button>
-                </div>
-            </div>
-        </form>
-        
-    </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="container">
         <figure class="footer-logo">
