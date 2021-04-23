@@ -357,3 +357,13 @@ ul.footer-menu li a {
   border-radius: 10px !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+.btn-primary {
+  background-color: #cf1717;
+  border-color: #cf1717;
+}
+
+.btn-primary:hover {
+  background-color: #b91717;
+  border-color: #b91717;
+}
