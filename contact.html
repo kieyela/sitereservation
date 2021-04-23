@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <title>Contacter - Keybat Travel</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <!--Fontawesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo-white.png" alt="logo-keybat" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li>
+                <a class="nav-link" href="index.html">Acceuil</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Destinations</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Nous contacter</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="language-selector"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img src="img/france-flag-icon-32.png" alt="french-flag" />
+                  fr
+                </a>
+                <div class="dropdown-menu" aria-labelledby="language-selector">
+                  <a class="dropdown-item" href="#">
+                    <img
+                      src="img/united-kingdom-flag-icon-32.png"
+                      alt="uk-flag"
+                    />
+                    en
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <img src="img/spain-flag-icon-32.png" alt="uk-flag" />
+                    es
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="welcome-container">
+        <div class="container">
+          <div class="pages-title">
+            <h1>Nous contacter</h1>
+            <div class="page-nav">
+              <p>
+                <a href="#">Acceuil</a> &nbsp; | &nbsp;
+                <a href="#">Nous contacter</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="contact-banner mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="contact-box">
+                <div class="cb-circle">
+                  <figure class="cb-icon">
+                    <i class="fa fa-2x fa-map-marker-alt"></i>
+                  </figure>
+                </div>
+                <p>Rue Paris Village Abijdan-Plateau, Côte d'Ivoire</p>
+              </div>
+            </div>
+            <div class="col-lg-4 spacing-m-center">
+              <div class="contact-box">
+                <div class="cb-circle">
+                  <figure class="cb-icon">
+                    <i class="fa fa-2x fa-phone"></i>
+                  </figure>
+                </div>
+                <p>
+                  <a href="tel:+225-07-07-08-09-10"> +225-07-07-08-09-10</a>
+                </p>
+                <p>
+                  <a href="tel:+225-05-05-06-07-08"> +225-05-05-06-07-08</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="contact-box">
+                <div class="cb-circle">
+                  <figure class="cb-icon">
+                    <i class="fa fa-2x fa-envelope"></i>
+                  </figure>
+                </div>
+                <p>
+                  <a href="mailto:info@keybat-travel.com"
+                    >info@keybat-travel.com</a
+                  >
+                </p>
+                <p>
+                  <a href="mailto:sales@keybat-travel.com"
+                    >sales@keybat-travel.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="contact-title">
+              <h3>Prenez contact avec nous</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
+                vel pretium lectus quam id leo in. Egestas dui id ornare arcu.
+              </p>
+            </div>
+            <br />
+            <form
+              id="contact-form"
+              method="post"
+              action="contact.php"
+              novalidate="true"
+            >
+              <div class="messages"></div>
+              <div class="controls">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        id="form_name"
+                        type="text"
+                        name="name"
+                        class="form-control custom-form"
+                        placeholder="*Nom"
+                        required="required"
+                        data-error="Le nom est requis."
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input
+                        id="form_email"
+                        type="email"
+                        name="email"
+                        class="form-control custom-form"
+                        placeholder="*Adresse email"
+                        required="required"
+                        data-error="Une adresse email valide est requise."
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <input
+                        id="form_phone"
+                        type="tel"
+                        name="phone"
+                        class="form-control custom-form"
+                        placeholder="*Veuillez entrer votre téléphone"
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <textarea
+                        id="form_message"
+                        name="message"
+                        class="form-control message-form custom-form"
+                        placeholder="*Votre message"
+                        rows="6"
+                        required="required"
+                        data-error="Veuillez nous laisser un message."
+                      ></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-md-12 btn-send">
+                    <p>
+                      <input
+                        type="submit"
+                        class="btn btn-primary"
+                        value="Envoyer"
+                      />
+                    </p>
+                  </div>
+                  <div class="col-sm-12">
+                    <p class="required">
+                      * Les champs avec un astérisque sont requis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <figure class="footer-logo">
+          <img src="img/logo-white.png" alt="" />
+        </figure>
+        <ul class="footer-menu d-flex justify-content-center">
+          <li><a href="index.html">ACCEUIL</a></li>
+          <li><a href="destinations.html">DESTINATIONS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="#">BLOG</a></li>
+        </ul>
+
+        <div class="footer-social d-flex justify-content-center">
+          <a href="#">
+            <div><i class="fab fa-facebook-f"></i></div>
+          </a>
+          <a href="#">
+            <div><i class="fab fa-twitter"></i></div>
+          </a>
+          <a href="#">
+            <div><i class="fab fa-instagram"></i></div>
+          </a>
+          <a href="#">
+            <div><i class="fab fa-youtube"></i></div>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
