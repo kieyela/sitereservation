@@ -53,6 +53,16 @@ body {
   margin-left: 10px;
 }
 
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  -webkit-animation: fade 0.5s;
+  animation: fade 0.5s;
+  /*background-color: rgba(33, 30, 59, 0.8);*/
+  background-color: rgba(207, 23, 23, 0.6);
+  box-shadow: 0 4px 4px -6px #333;
+}
+
 .welcome-container {
   background-image: url("../img/bg.jpg");
   height: 400px;
