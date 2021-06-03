@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
   <head>
-    <title>Contacter - Keybat Travel</title>
+    <title>Réservation - Keybat Travel</title>
     <meta
       charset="utf-8"
       name="viewport"
@@ -93,7 +93,7 @@
       <div class="welcome-container">
         <div class="container">
           <div class="pages-title">
-            <h1>Nous contacter</h1>
+            <h1>Réservation</h1>
             <div class="page-nav">
               <p>
                 <a href="index.html">Acceuil</a> &nbsp; | &nbsp;
@@ -105,14 +105,13 @@
         </div>
       </div>
     </header>
-
     <section class="slide container mt-3 pt-4">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="section-title text-center">
               <span>Réservation</span>
-              <h2 style="color: #000">Réserver votre billet</h2>
+              <h2 style="color: #000">Réservez votre billet</h2>
             </div>
           </div>
         </div>
@@ -121,7 +120,7 @@
             <form
               class="p-4 bg-dark-opaque"
               method="post"
-              action="confirmation.html"
+              action="confirmation.php"
             >
               <fieldset class="form-group row">
                 <legend class="col-form-legend col-sm-1-12">
@@ -129,26 +128,41 @@
                 </legend>
                 <div class="col-lg-8 p-3">
                   <div class="form-group">
-                    <label>Identifiant client</label>
-                    <input class="form-control" placeholder="saisir ici" />
-                  </div>
-                  <div class="form-group">
                     <label>Nom du client</label>
-                    <input class="form-control" placeholder="saisir ici" />
+                    <input
+                      required="required"
+                      name="client-name"
+                      class="form-control"
+                      placeholder="saisir ici"
+                    />
                   </div>
                   <div class="form-group">
                     <label>numéro de télephone</label>
-                    <input class="form-control" placeholder="saisir ici" />
+                    <input
+                      required="required"
+                      name="client-tel"
+                      class="form-control"
+                      placeholder="saisir ici"
+                    />
                   </div>
                   <br />
                   <div class="form-group">
                     <label>Adresse Email</label>
-                    <input class="form-control" placeholder="saisir ici" />
+                    <input
+                      required="required"
+                      name="client-mail"
+                      class="form-control"
+                      placeholder="saisir ici"
+                    />
                   </div>
                   <br />
                   <div class="form-group">
                     <label>Numéro de passeport</label>
-                    <input class="form-control" placeholder="saisir ici" />
+                    <input
+                      name="client-passport"
+                      class="form-control"
+                      placeholder="saisir ici"
+                    />
                   </div>
                 </div>
               </fieldset>
@@ -159,7 +173,13 @@
                 <div class="col-lg-8 p-3">
                   <div class="form-group">
                     <label>Identifiant de la destination</label>
-                    <input class="form-control" placeholder="saisir ici" />
+                    <input
+                      read-only
+                      name="destination-iddest"
+                      class="form-control"
+                      placeholder="saisir ici"
+                      hidden
+                    />
                   </div>
                   <div class="form-group">
                     <label>Nom de la ville </label>
@@ -191,9 +211,11 @@
                     </div>
                     <div class="form-group">
                       <label>date de départ</label>
-                      <input class="form-control" placeholder="saisir ici" />
+                      <input name="billet-datdep" type="date" "form-control"
+                      placeholder="saisir ici" />
                       <label>date de retour</label>
-                      <input class="form-control" placeholder="saisir ici" />
+                      <input name="billet-datfin" type="date" "form-control"
+                      placeholder="saisir ici" />
                     </div>
                   </div>
                 </div>
