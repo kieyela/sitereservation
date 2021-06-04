@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr-FR">
   <head>
@@ -25,7 +31,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <img src="img/logo-white.png" alt="logo-keybat" />
           </a>
           <button
@@ -42,13 +48,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li>
-                <a class="nav-link" href="index.html">Acceuil</a>
+                <a class="nav-link" href="index.php">Acceuil</a>
               </li>
               <li>
-                <a class="nav-link" href="destinations.html">Destinations</a>
+                <a class="nav-link" href="destinations.php">Destinations</a>
               </li>
               <li>
-                <a class="nav-link" href="contact.html">Nous contacter</a>
+                <a class="nav-link" href="contact.php">Nous contacter</a>
               </li>
               <li>
                 <a class="nav-link" href="#">Blog</a>
@@ -80,11 +86,28 @@
                   </a>
                 </div>
               </li>
-              <li>
-                <a class="nav-link" href="login.html"
-                  ><i class="fa fa-user"></i>
-                  Espace Agent
+              <li class="dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="agent-profile"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-user"></i>
+                  <?php if (!empty($_SESSION['login'])){ echo $_SESSION['agent']; } else { echo "Espace Agent";}   ?>
                 </a>
+                <div class="dropdown-menu" aria-labelledby="agent-profile">
+                  <?php
+                  if (!empty($_SESSION['login']) ){
+                    echo '<a class="dropdown-item" href="login.php">Connexion</a>';
+                  } else {
+                    echo '<a class="dropdown-item" href="logout.php">Déconnexion</a>';
+                  }
+                  ?>
+                </div>
               </li>
             </ul>
           </div>
@@ -96,8 +119,8 @@
             <h1>Nous contacter</h1>
             <div class="page-nav">
               <p>
-                <a href="index.html">Acceuil</a> &nbsp; | &nbsp;
-                <a href="contact.html">Nous contacter</a>
+                <a href="index.php">Acceuil</a> &nbsp; | &nbsp;
+                <a href="contact.php">Nous contacter</a>
               </p>
             </div>
           </div>
@@ -262,9 +285,9 @@
           <img src="img/logo-white.png" alt="" />
         </figure>
         <ul class="footer-menu d-flex justify-content-center">
-          <li><a href="index.html">ACCEUIL</a></li>
-          <li><a href="destinations.html">DESTINATIONS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="index.php">ACCEUIL</a></li>
+          <li><a href="destinations.php">DESTINATIONS</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
           <li><a href="#">BLOG</a></li>
         </ul>
 

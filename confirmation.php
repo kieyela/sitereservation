@@ -2,9 +2,9 @@
 
 session_start();
 
-$_SESSION["billet_request"] = $_POST;
-
 require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
+
+$_SESSION["billet_request"] = $_POST;
 
 # assurons nous que l'utilisateur est enregistré
 redirectIfNotLoggedIn();
@@ -50,7 +50,6 @@ if (!$clientPassport) {
 }
 
 $destinationId = validateFormElement("iddest", FILTER_VALIDATE_INT);
-$destinationId = 1;
 if (!$destinationId) {
     $errors["iddest"] = "Fournissez une destination valide";
 }
@@ -75,10 +74,7 @@ $client["tel"] = $clientTel;
 $client["mail"] = $clientMail;
 $client["passeport"] = $clientPassport;
 $client["iddest"] = $destinationId;
-$client["idag"] = 1;
-
-var_dump($client);
-var_dump($errors);
+$client["idag"] = $_SESSION["agent_id"];
 
 #supprime les clés vides
 $client = array_filter($client);

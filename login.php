@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -31,14 +37,20 @@
         <div class="card">
           <div class="card-header">
             <h3>
-              <a href="index.html">
+              <a href="index.php">
                 <img src="img/logo-white.png" alt="logo" />
               </a>
               <span class="small">| Espace Agent</span>
             </h3>
           </div>
           <div class="card-body">
-            <form action="/agent.html">
+            <?php
+            if (!empty($_SESSION["logged"]) && !$_SESSION['logged']){
+echo'<div class="alert-danger alert">Nom d\'utilisateur ou mot de passe incorrects.</div>';
+
+            }
+            ?>
+            <form action="do-login.php" method="POST">
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
@@ -48,7 +60,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Nom d'utilisateur"
+                  name="username"
+                  placeholder="exemple@domain.com"
                 />
               </div>
               <div class="input-group form-group">
@@ -60,11 +73,12 @@
                 <input
                   type="password"
                   class="form-control"
+                  name="password"
                   placeholder="Mot de passe"
                 />
               </div>
               <div class="row align-items-center remember">
-                <input type="checkbox" />Souviens-toi de moi
+                <input type="checkbox" name="remember"/>Souviens-toi de moi
               </div>
               <div class="form-group">
                 <input

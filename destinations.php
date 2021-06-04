@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
+?>
 <!DOCTYPE html>
 <html lang="fr-FR">
   <head>
@@ -25,7 +30,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <img src="img/logo-white.png" alt="logo-keybat" />
           </a>
           <button
@@ -42,13 +47,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li>
-                <a class="nav-link" href="index.html">Acceuil</a>
+                <a class="nav-link" href="index.php">Acceuil</a>
               </li>
               <li>
-                <a class="nav-link" href="destinations.html">Destinations</a>
+                <a class="nav-link" href="destinations.php">Destinations</a>
               </li>
               <li>
-                <a class="nav-link" href="contact.html">Nous contacter</a>
+                <a class="nav-link" href="contact.php">Nous contacter</a>
               </li>
               <li>
                 <a class="nav-link" href="#">Blog</a>
@@ -80,11 +85,28 @@
                   </a>
                 </div>
               </li>
-              <li>
-                <a class="nav-link" href="login.html"
-                  ><i class="fa fa-user"></i>
-                  Espace Agent
+              <li class="dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="agent-profile"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-user"></i>
+                  <?php if (!empty($_SESSION['login'])){ echo $_SESSION['agent']; } else { echo "Espace Agent";}   ?>
                 </a>
+                <div class="dropdown-menu" aria-labelledby="agent-profile">
+                  <?php
+                  if (empty($_SESSION['login']) ){
+                    echo '<a class="dropdown-item" href="login.php">Connexion</a>';
+                  } else {
+                    echo '<a class="dropdown-item" href="logout.php">Déconnexion</a>';
+                  }
+                  ?>
+                </div>
               </li>
             </ul>
           </div>
@@ -128,7 +150,7 @@
               <div class="card-body">
                 <h4 class="card-title">Dubai</h4>
                 <p class="card-text">Dubai, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -144,7 +166,7 @@
               <div class="card-body">
                 <h4 class="card-title">Bresil</h4>
                 <p class="card-text">Bresil, un très beau site.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -160,7 +182,7 @@
               <div class="card-body">
                 <h4 class="card-title">Etats Unis</h4>
                 <p class="card-text">Etats Unis, un très beau site.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -178,7 +200,7 @@
               <div class="card-body">
                 <h4 class="card-title">France</h4>
                 <p class="card-text">France,un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -194,7 +216,7 @@
               <div class="card-body">
                 <h4 class="card-title">Espagne</h4>
                 <p class="card-text">Espagne, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -210,7 +232,7 @@
               <div class="card-body">
                 <h4 class="card-title">Danemark</h4>
                 <p class="card-text">Danemark, un très beau site.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -228,7 +250,7 @@
               <div class="card-body">
                 <h4 class="card-title">Turki</h4>
                 <p class="card-text">Turki, un très beau pays</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -244,7 +266,7 @@
               <div class="card-body">
                 <h4 class="card-title">Australie</h4>
                 <p class="card-text">Astralie, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -260,7 +282,7 @@
               <div class="card-body">
                 <h4 class="card-title">Angleterre</h4>
                 <p class="card-text">Angleterre, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -278,7 +300,7 @@
               <div class="card-body">
                 <h4 class="card-title">Ghana</h4>
                 <p class="card-text">Ghana, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -294,7 +316,7 @@
               <div class="card-body">
                 <h4 class="card-title">Togo</h4>
                 <p class="card-text">Togo, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -310,7 +332,7 @@
               <div class="card-body">
                 <h4 class="card-title">Afrique du Sud</h4>
                 <p class="card-text">Afrique du Sud, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.html" role="button"
+                <a class="btn btn-primary" href="reservation.php" role="button"
                   >Réserver</a
                 >
               </div>
@@ -325,9 +347,9 @@
           <img src="img/logo-white.png" alt="" />
         </figure>
         <ul class="footer-menu d-flex justify-content-center">
-          <li><a href="index.html">ACCEUIL</a></li>
-          <li><a href="destinations.html">DESTINATIONS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="index.php">ACCEUIL</a></li>
+          <li><a href="destinations.php">DESTINATIONS</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
           <li><a href="#">BLOG</a></li>
         </ul>
 
