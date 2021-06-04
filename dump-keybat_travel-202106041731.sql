@@ -54,6 +54,7 @@ DROP TABLE IF EXISTS `agents`;
 CREATE TABLE `agents` (
   `idag` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `tel` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`idag`)
@@ -66,7 +67,7 @@ CREATE TABLE `agents` (
 
 LOCK TABLES `agents` WRITE;
 /*!40000 ALTER TABLE `agents` DISABLE KEYS */;
-INSERT INTO `agents` VALUES (1,'Marie-Josée Agbetou','+22557112412','pascale.agbetou@keybat-travel.com');
+INSERT INTO `agents` VALUES (1,'Marie-Josée Agbetou','cb46d201f75cca49a322a30027ae18a1','+22557112412','pascale.agbetou@keybat-travel.com');
 /*!40000 ALTER TABLE `agents` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,4 +170,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-03 23:49:43
+-- Dump completed on 2021-06-04 17:31:46
