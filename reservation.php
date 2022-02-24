@@ -7,7 +7,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
 <!DOCTYPE html>
 <html lang="fr-FR">
   <head>
-    <title>Réservation - Keybat Travel</title>
+    <title>Réservation</title>
     <meta
       charset="utf-8"
       name="viewport"
@@ -32,7 +32,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img src="img/logo-white.png" alt="logo-keybat" />
+            <img src="img/" alt="logo-keybat" />
           </a>
           <button
             class="navbar-toggler"
@@ -47,18 +47,16 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li>
-                <a class="nav-link" href="index.php">Acceuil</a>
+            <li>
+              <h4><a class="nav-link" href="index.php">Acceuil</a></h4>  
               </li>
               <li>
-                <a class="nav-link" href="destinations.php">Destinations</a>
+               <h4><a class="nav-link" href="contact.php">Contact</a></h4> 
               </li>
               <li>
-                <a class="nav-link" href="contact.php">Nous contacter</a>
+                <h4><a class="nav-link" href="destinations.php">Mes Réservations</a></h4>
               </li>
-              <li>
-                <a class="nav-link" href="#">Blog</a>
-              </li>
+              
               <li class="dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -129,140 +127,56 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
       </div>
     </header>
     <section class="slide container mt-3 pt-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-title text-center">
-              <span>Réservation</span>
-              <h2 style="color: #000">Réservez votre billet</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <form
-              class="p-4 bg-dark-opaque"
-              method="post"
-              action="confirmation.php"
-            >
-              <fieldset class="form-group row">
-                <legend class="col-form-legend col-sm-1-12">
-                  Informations client
-                </legend>
-                <div class="col-lg-8 p-3">
-                  <div class="form-group">
-                    <label>Nom du client</label>
-                    <input
-                      required="required"
-                      name="client-name"
-                      class="form-control"
-                      placeholder="saisir ici"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>numéro de télephone</label>
-                    <input
-                      required="required"
-                      name="client-tel"
-                      class="form-control"
-                      placeholder="saisir ici"
-                    />
-                  </div>
-                  <br />
-                  <div class="form-group">
-                    <label>Adresse Email</label>
-                    <input
-                      required="required"
-                      name="client-mail"
-                      class="form-control"
-                      placeholder="saisir ici"
-                    />
-                  </div>
-                  <br />
-                  <div class="form-group">
-                    <label>Numéro de passeport</label>
-                    <input
-                      name="client-passport"
-                      class="form-control"
-                      placeholder="saisir ici"
-                    />
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="form-group row">
-                <legend class="col-form-legend col-sm-1-12">
-                  Détail de la resevation
-                </legend>
-                <div class="col-lg-8 p-3">
-                  <div class="form-group">
-                    <label>Identifiant de la destination</label>
-                    <input
-                      read-only
-                      name="destination-iddest"
-                      class="form-control"
-                      placeholder="saisir ici"
-                      hidden
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Nom de la ville </label>
-                    <select class="custom-select" name="" id="">
-                      <option selected>Selectionner la destination</option>
-                      <option value="">paris</option>
-                      <option value="">abidjan</option>
-                      <option value="">rabat</option>
-                      <option value="">casablanca</option>
-                      <option value="">bamako</option>
-                      <option value="">millan</option>
-                      <option value="">quebec</option>
-                      <option value="">lile</option>
-                    </select>
+    <div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="fname">Nom:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="lname">Prenom:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="email">Email:</label>
+				  <div class="col-sm-10">
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+				  </div>
+				</div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="comment">date</label>
+          <div class="col-sm-10">
+					<input type="date" class="form-control" id="date" placeholder="Enter email" name="date">
+				  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-danger">Submit</button>
+				  </div>
+				</div>
+			</div>
+		</div>
 
-                    <div class="form-group">
-                      <label>nom du pays</label>
-                      <select class="custom-select" name="" id="">
-                        <option selected>Selectionner la destination</option>
-                        <option value="">cote d'ivoire</option>
-                        <option value="">france</option>
-                        <option value="">maroc</option>
-                        <option value="">Mali</option>
-                        <option value="">Allemagne</option>
-                        <option value="">belgique</option>
-                        <option value="">suisse</option>
-                        <option value="">canada</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label>date de départ</label>
-                      <input name="billet-datdep" type="date" "form-control"
-                      placeholder="saisir ici" />
-                      <label>date de retour</label>
-                      <input name="billet-datfin" type="date" "form-control"
-                      placeholder="saisir ici" />
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <div class="form-group row">
-                <div class="offset-sm-2 col-sm-10">
-                  <button type="submit" class="btn btn-primary">Valider</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+</div>
+
     </section>
     <footer>
       <div class="container">
         <figure class="footer-logo">
-          <img src="img/logo-white.png" alt="" />
+          <img src="" alt="" />
         </figure>
         <ul class="footer-menu d-flex justify-content-center">
           <li><a href="index.php">ACCEUIL</a></li>
           <li><a href="destinations.php">DESTINATIONS</a></li>
           <li><a href="contact.php">CONTACT</a></li>
-          <li><a href="#">BLOG</a></li>
+         
         </ul>
 
         <div class="footer-social d-flex justify-content-center">

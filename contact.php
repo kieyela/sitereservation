@@ -32,7 +32,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img src="img/logo-white.png" alt="logo-keybat" />
+            <img src="" alt="logo-keybat" />
           </a>
           <button
             class="navbar-toggler"
@@ -47,17 +47,14 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li>
-                <a class="nav-link" href="index.php">Acceuil</a>
+            <li>
+              <h4><a class="nav-link" href="index.php">Acceuil</a></h4>  
               </li>
               <li>
-                <a class="nav-link" href="destinations.php">Destinations</a>
+               <h4><a class="nav-link" href="contact.php">Contact</a></h4> 
               </li>
               <li>
-                <a class="nav-link" href="contact.php">Nous contacter</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#">Blog</a>
+                <h4><a class="nav-link" href="destinations.php">Mes Réservations</a></h4>
               </li>
               <li class="dropdown">
                 <a
@@ -120,7 +117,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
             <div class="page-nav">
               <p>
                 <a href="index.php">Acceuil</a> &nbsp; | &nbsp;
-                <a href="contact.php">Nous contacter</a>
+                <a href="contact.php">Contacte</a>
               </p>
             </div>
           </div>
@@ -138,7 +135,11 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
                     <i class="fa fa-2x fa-map-marker-alt"></i>
                   </figure>
                 </div>
-                <p>Rue Paris Village Abijdan-Plateau, Côte d'Ivoire</p>
+                <p>
+                  Toulouse Ynov Campus
+                  <br>
+                  <span>2 place de l'europe, 31000 Toulouse</span>
+                </p>
               </div>
             </div>
             <div class="col-lg-4 spacing-m-center">
@@ -149,11 +150,9 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
                   </figure>
                 </div>
                 <p>
-                  <a href="tel:+225-07-07-08-09-10"> +225-07-07-08-09-10</a>
+                  <a href="tel:+33 5 82 95 10 48"> +33 05 82 95 10 48</a>
                 </p>
-                <p>
-                  <a href="tel:+225-05-05-06-07-08"> +225-05-05-06-07-08</a>
-                </p>
+               
               </div>
             </div>
             <div class="col-lg-4">
@@ -164,15 +163,10 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
                   </figure>
                 </div>
                 <p>
-                  <a href="mailto:info@keybat-travel.com"
-                    >info@keybat-travel.com</a
+                  <a href="ynov@gmail.com">ynov@gmail.com</a
                   >
                 </p>
-                <p>
-                  <a href="mailto:sales@keybat-travel.com"
-                    >sales@keybat-travel.com</a
-                  >
-                </p>
+               
               </div>
             </div>
           </div>
@@ -288,7 +282,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
           <li><a href="index.php">ACCEUIL</a></li>
           <li><a href="destinations.php">DESTINATIONS</a></li>
           <li><a href="contact.php">CONTACT</a></li>
-          <li><a href="#">BLOG</a></li>
+         
         </ul>
 
         <div class="footer-social d-flex justify-content-center">

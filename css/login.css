@@ -13,6 +13,7 @@ body {
   align-content: center;
 }
 
+
 .card {
   height: 370px;
   margin-top: auto;
@@ -82,3 +83,4 @@ input:focus {
 .links a {
   margin-left: 4px;
 }
+

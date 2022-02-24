@@ -6,7 +6,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
 <!DOCTYPE html>
 <html lang="fr-FR">
   <head>
-    <title>Destinations - Keybat Travel</title>
+    <title>Destinations - Mars</title>
     <meta
       charset="utf-8"
       name="viewport"
@@ -31,7 +31,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img src="img/logo-white.png" alt="logo-keybat" />
+            <img src="" alt="logo-LSD" />
           </a>
           <button
             class="navbar-toggler"
@@ -50,14 +50,12 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
                 <a class="nav-link" href="index.php">Acceuil</a>
               </li>
               <li>
-                <a class="nav-link" href="destinations.php">Destinations</a>
+                <a class="nav-link" href="destinations.php">Réservations</a>
               </li>
               <li>
                 <a class="nav-link" href="contact.php">Nous contacter</a>
               </li>
-              <li>
-                <a class="nav-link" href="#">Blog</a>
-              </li>
+              
               <li class="dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -118,7 +116,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
             <h1>Nos destinations</h1>
             <div class="page-nav">
               <p>
-                <a href="#">Acceuil</a> &nbsp; | &nbsp;
+                <a href="index.php">Acceuil</a> &nbsp; | &nbsp;
                 <a href="#">Destinations</a>
               </p>
             </div>
@@ -132,8 +130,7 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
         <div class="row">
           <div class="col-md-12">
             <div class="section-title text-center">
-              <span>Destinations</span>
-              <h2 style="color: #000">Partez à la découverte<br />du monde</h2>
+              <h2 style="color: #000">Partez à la découverte de la planette</h2>
             </div>
           </div>
         </div>
@@ -142,99 +139,50 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
             <div class="card">
               <img
                 class="card-img-top"
-                src="img/dubai.jpg"
+                src="img/default.jpg"
                 alt=""
                 width="30px"
                 height="200px"
               />
               <div class="card-body">
-                <h4 class="card-title">Dubai</h4>
-                <p class="card-text">Dubai, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
+                <h4 class="card-title"></h4>
+                <p class="card-text">planette de rêve.</p>
+                <a class="btn btn-info" href="reservation.php" role="button">
+                  Réserver
+                </a>
               </div>
             </div>
             <div class="card">
               <img
                 class="card-img-top"
-                src="img/bresil.jpg"
+                src="img/surving.jpg"
                 alt=""
                 width="30px"
                 height="200px"
               />
               <div class="card-body">
-                <h4 class="card-title">Bresil</h4>
-                <p class="card-text">Bresil, un très beau site.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
+                <h4 class="card-title"></h4>
+                <p class="card-text">planette de rêve.</p>
+                <a class="btn btn-info" href="reservation.php" role="button">
+                  Réserver 
+                </a>
               </div>
             </div>
             <div class="card">
               <img
                 class="card-img-top"
-                src="img/etats unis.jpg"
+                src="img/fb.jpeg"
                 alt=""
                 width="30px"
                 height="200px"
               />
               <div class="card-body">
-                <h4 class="card-title">Etats Unis</h4>
-                <p class="card-text">Etats Unis, un très beau site.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card-columns">
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="img/france.jpg"
-                alt=""
-                width="30px"
-                height="200px"
-              />
-              <div class="card-body">
-                <h4 class="card-title">France</h4>
-                <p class="card-text">France,un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
-              </div>
-            </div>
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="img/espagne2.jpg"
-                alt=""
-                width="30px"
-                height="200px"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Espagne</h4>
-                <p class="card-text">Espagne, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
-              </div>
-            </div>
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="img/danemark.jpg"
-                alt=""
-                width="30px"
-                height="200px"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Danemark</h4>
-                <p class="card-text">Danemark, un très beau site.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
+                <h4 class="card-title"></h4>
+                <p class="card-text">planette de rêve.</p>
+                <a class="btn btn-info" href="reservation.php" role="button">
+                   Réserver 
+                  
+                  </a>
               </div>
             </div>
           </div>
@@ -242,99 +190,49 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
             <div class="card">
               <img
                 class="card-img-top"
-                src="img/turki.jpg"
-                alt=""
-                width="10px"
-                height="200px"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Turki</h4>
-                <p class="card-text">Turki, un très beau pays</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
-              </div>
-            </div>
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="img/australie.jpg"
+                src="img/maison.jpg"
                 alt=""
                 width="30px"
                 height="200px"
               />
               <div class="card-body">
-                <h4 class="card-title">Australie</h4>
-                <p class="card-text">Astralie, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
+                <h4 class="card-title"></h4>
+                <p class="card-text">planette de rêve.</p>
+                <a class="btn btn-info" href="reservation.php" role="button">
+                  Réserver
+                </a>
               </div>
             </div>
             <div class="card">
               <img
                 class="card-img-top"
-                src="img/angleterre.jpg"
+                src="img/futur.jpeg"
                 alt=""
                 width="30px"
                 height="200px"
               />
               <div class="card-body">
-                <h4 class="card-title">Angleterre</h4>
-                <p class="card-text">Angleterre, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card-columns">
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="img/ghana.jpg"
-                alt=""
-                width="30px"
-                height="200px"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Ghana</h4>
-                <p class="card-text">Ghana, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
+                <h4 class="card-title"></h4>
+                <p class="card-text">planette de rêve.</p>
+                <a class="btn btn-info" href="reservation.php" role="button">
+                  Réserver
+                  </a>
               </div>
             </div>
             <div class="card">
               <img
                 class="card-img-top"
-                src="img/togo.jpg"
+                src="img/mauro.jpg"
                 alt=""
                 width="30px"
                 height="200px"
               />
               <div class="card-body">
-                <h4 class="card-title">Togo</h4>
-                <p class="card-text">Togo, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
-              </div>
-            </div>
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="img/Afrique du sud.jpg"
-                alt=""
-                width="30px"
-                height="200px"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Afrique du Sud</h4>
-                <p class="card-text">Afrique du Sud, un pays de rêve.</p>
-                <a class="btn btn-primary" href="reservation.php" role="button"
-                  >Réserver</a
-                >
+                <h4 class="card-title"></h4>
+                <p class="card-text">planette de rêve.</p>
+                <a class="btn btn-info" href="reservation.php" role="button">
+                  Réserver
+                  </a>
               </div>
             </div>
           </div>
@@ -344,13 +242,13 @@ require_once __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."utils.php";
     <footer>
       <div class="container">
         <figure class="footer-logo">
-          <img src="img/logo-white.png" alt="" />
+          <img src="" alt="" />
         </figure>
         <ul class="footer-menu d-flex justify-content-center">
           <li><a href="index.php">ACCEUIL</a></li>
           <li><a href="destinations.php">DESTINATIONS</a></li>
           <li><a href="contact.php">CONTACT</a></li>
-          <li><a href="#">BLOG</a></li>
+         
         </ul>
 
         <div class="footer-social d-flex justify-content-center">
